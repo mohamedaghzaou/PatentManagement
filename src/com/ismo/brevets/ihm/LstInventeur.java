@@ -91,7 +91,6 @@ public class LstInventeur extends JInternalFrame {
 		bottomPanel.add(txtNum);
 		txtNum.setColumns(10);
 
-
 		txtNom = new JTextField();
 		txtNom.setEditable(false);
 		txtNom.setColumns(10);
@@ -121,7 +120,6 @@ public class LstInventeur extends JInternalFrame {
 		CmbEnterprise.setEditable(true);
 		CmbEnterprise.setBounds(158, 140, 165, 22);
 		bottomPanel.add(CmbEnterprise);
-
 
 		JPanel panel = new JPanel();
 		panel.setBounds(400, 14, 146, 151);
@@ -207,8 +205,9 @@ public class LstInventeur extends JInternalFrame {
 					return;
 				}
 
-				int r = JOptionPane.showConfirmDialog(null, "Voulez vous vraiment Supprimer, Operation va supprimer tout les brevets de cette inveteurs", "Supprimer",
-						JOptionPane.YES_NO_OPTION);
+				int r = JOptionPane.showConfirmDialog(null,
+						"Voulez vous vraiment Supprimer, Operation va supprimer tout les brevets de cette inveteurs",
+						"Supprimer", JOptionPane.YES_NO_OPTION);
 				if (r == JOptionPane.YES_OPTION) {
 					int id = Integer.parseInt(txtNum.getText());
 					daoInventeur.delete(new Inventeur(id));
